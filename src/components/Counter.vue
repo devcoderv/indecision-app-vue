@@ -1,6 +1,7 @@
 <template>
   <h1>Counter</h1>
   <p>{{ counter }}<sup>2</sup> = {{ squerCounter }}</p>
+  <p data-testid="counter">{{counter}}</p>
   <div>
     <button @click="decrement">-1</button>
     <button @click="increment">+1</button>
@@ -13,7 +14,7 @@ export default {
     title: String,
     start: {
       type: Number,
-      default: 1,
+      default: 100,
       validator(value) {
         return value >= 0;
       },
